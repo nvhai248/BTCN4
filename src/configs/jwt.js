@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 // set up dot env
+require('dotenv').config();
 const secretkey = "mysecret";
 
 function createJWT(user) {
