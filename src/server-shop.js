@@ -5,6 +5,7 @@ const handlebars = require("express-handlebars").create({
 });
 const path = require("path");
 
+
 // declare app
 const app = express();
 const port = 20468;
@@ -30,6 +31,8 @@ app.use(express.json());
 require('./configs/session')(app);
 //setup routes
 require('./routes')(app);
+//set up socket io
+require('./configs/socket')(app);
 
 app.use((err, req, res, next) => {
     res.status(500).send(err.message);
