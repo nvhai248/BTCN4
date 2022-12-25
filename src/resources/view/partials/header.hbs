@@ -1,7 +1,15 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" id="HomepageBtn">Home</a>
-    <a class="navbar-brand text-white" id="favoritePageBtn">Favorite Movies</a>
+    <a class="navbar-brand text-white" id="HomepageBtn" href="/1">Home</a>
+    <a
+      class="btn btn-primary"
+      data-bs-toggle="offcanvas"
+      href="#offcanvasExample"
+      role="button"
+      aria-controls="offcanvasExample"
+    >
+      Menu
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -18,6 +26,23 @@
 
       </ul>
       <div class="d-flex" role="search">
+        <a class="text-white me-5">Xin chào: Khách hàng</a>
+        <div>
+          <a href="/cart">
+            <img
+              style="width: 40px;"
+              src="https://img.icons8.com/office/80/null/shopping-cart.png"
+            />
+          </a>
+
+          <span
+            class="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger"
+          >
+            {{countPro}}
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </div>
+
         <a
           class="btn btn-outline-danger ms-5"
           aria-current="page"
@@ -58,7 +83,11 @@
           class="btn btn-secondary"
           data-bs-dismiss="modal"
         >Không</button>
-        <a type="button" class="btn btn-danger" href="/">Chắc chắn</a>
+        <a
+          type="button"
+          class="btn btn-danger"
+          href="http://localhost:3113/"
+        >Chắc chắn</a>
       </div>
     </div>
   </div>

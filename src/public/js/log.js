@@ -18,18 +18,26 @@ $('#reg').click(function (e) {
     const user = document.getElementById("usernameR").value;
     const pass = document.getElementById("passwordR").value;
     const conf = document.getElementById("confirm").value;
+    const fullName = $('#fullName').val();
+    const address = $('#address').val();
     let notification = document.getElementById("notificationR");
     if (user == "") {
-        notification.innerHTML = "Vui lòng nhập tài khoản!"
+        notification.innerHTML = "Please enter username!"
     }
     else if (pass == "") {
-        notification.innerHTML = "Vui lòng nhập mật khẩu!"
+        notification.innerHTML = "Please enter password!"
     }
     else if (conf == "") {
-        notification.innerHTML = "Vui lòng nhập xác nhận mật khẩu!"
+        notification.innerHTML = "Please enter confirm password!"
     }
     else if (pass != conf) {
-        notification.innerHTML = "Vui lòng nhập mật khẩu và xác nhận giống nhau!"
+        notification.innerHTML = "Confirm password is incorrect!"
+    }
+    else if (address == "") {
+        notification.innerHTML = "Please enter your address!"
+    }
+    else if (fullName == "") {
+        notification.innerHTML = "Please enter your full name!"
     }
     else {
         const form = document.getElementById("registerForm");
@@ -44,10 +52,10 @@ $('#loginBtn').click(function (e) {
     const pass = document.getElementById("passwordL").value;
     let notification = document.getElementById("notificationL");
     if (user == "") {
-        notification.innerHTML = "Vui lòng nhập tài khoản!"
+        notification.innerHTML = "Please enter username!"
     }
     else if (pass == "") {
-        notification.innerHTML = "Vui lòng nhập mật khẩu!"
+        notification.innerHTML = "Please enter password!"
     }
     else {
         const form = document.getElementById("loginForm");
